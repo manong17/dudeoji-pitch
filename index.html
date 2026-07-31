@@ -905,41 +905,34 @@ a{color:inherit;text-decoration:none}
 
     <!-- 5 MYPAGE -->
     <section class="slide slide--light" data-label="WHY IT SAVES" data-time="2:50–3:30"
-      data-note="저희는 에너지를 줄이는 지점을 네 군데로 나눠 설계했습니다. 첫째, 카메라 영상은 집 밖으로 내보내지 않습니다. JPEG은 BLE로 라즈베리파이까지만 가고, 파이가 사람 여부만 판정한 뒤 이미지는 버립니다. 둘째, 클라우드로 올리는 건 영상이 아니라 센서값과 재실 판단 결과뿐이라 통신량과 통신 전력이 크게 줄어듭니다. 셋째, 빈 방이면 에어컨을 끄자고 먼저 제안합니다. 넷째, 실외가 더 시원하면 에어컨 대신 창문을 권해서 에어컨을 켤 필요 자체를 줄입니다. 참고로 지금 시연은 지연·재연결 변수를 줄이려고 sleep을 안 쓴 Active 모드고, ESP32-S3 저전력 모드는 다음 단계 과제입니다.">
+      data-note="낭비가 생기는 지점을 데이터 두 곳, 전력 두 곳으로 나눠 막았습니다. 데이터 쪽 먼저 보시면, 카메라 영상은 집 밖으로 내보내지 않습니다. 사진은 BLE로 라즈베리파이까지만 가고, 파이가 사람 여부만 판정한 뒤 바로 버립니다. 그래서 클라우드로 올라가는 건 영상이 아니라 센서값과 판단 결과뿐이고, 보내는 양이 줄어드니 통신에 쓰는 전력도 줄어듭니다. 전력 쪽은, 빈 방이면 에어컨을 끄자고 먼저 제안하고, 실외가 더 시원하면 에어컨 대신 창문을 권해서 에어컨을 켤 필요 자체를 줄입니다.">
       <div class="slide__inner">
         <div class="eyebrow-row"><span>05</span><span>WHY IT SAVES</span></div>
         <header class="section-head section-head--wide">
-          <h2>전기만 아낀 게 아니라,<br/><em class="hl">보내는 데이터</em>까지 아꼈습니다.</h2>
-          <p>24시간 켜져 있어야 하는 서비스이기 때문에, 낭비가 생기는 지점을 네 군데로 나눠 막았습니다.</p>
+          <h2>전기도, 데이터도<br/><em class="hl">필요한 만큼만</em> 씁니다.</h2>
+          <p>24시간 켜져 있어야 하는 서비스이기 때문에, 낭비가 생기는 지점을 데이터 2곳·전력 2곳으로 나눠 막았습니다.</p>
         </header>
         <div class="saveby-grid">
           <article class="saveby-card rise" style="--i:0">
-            <div class="saveby-card__top"><span>🎥</span><div><strong>영상은 집 밖으로 안 나갑니다</strong><small>낭비 ① 영상 전송</small></div></div>
+            <div class="saveby-card__top"><span>🎥</span><div><strong>영상은 집 밖으로 안 나갑니다</strong><small>데이터 ① 영상 전송</small></div></div>
             <p>카메라 사진은 라즈베리파이까지만. 파이가 사람 여부만 판정하고 사진은 바로 버립니다.</p>
             <div class="gain">🔒 영상 업로드 0건</div>
           </article>
           <article class="saveby-card tone-blue rise" style="--i:1">
-            <div class="saveby-card__top"><span>📉</span><div><strong>올리는 건 판단값 한 줄</strong><small>낭비 ② 통신량</small></div></div>
+            <div class="saveby-card__top"><span>📉</span><div><strong>올리는 건 판단값 한 줄</strong><small>데이터 ② 통신량</small></div></div>
             <p>클라우드로는 사진 대신 센서값과 판단 결과만. 보내는 양이 줄면 통신 전력도 줄어듭니다.</p>
             <div class="gain">📡 전송량·통신 전력 절감</div>
           </article>
           <article class="saveby-card tone-amber rise" style="--i:2">
-            <div class="saveby-card__top"><span>🔌</span><div><strong>빈 방 냉방을 끕니다</strong><small>낭비 ③ 무인 냉방</small></div></div>
+            <div class="saveby-card__top"><span>🔌</span><div><strong>빈 방 냉방을 끕니다</strong><small>전력 ① 무인 냉방</small></div></div>
             <p>재실 기록으로 시간대 패턴을 학습하고, 사람이 없으면 에어컨을 끄자고 먼저 제안합니다.</p>
             <div class="gain">🌡️ 아무도 없는 시간 제거</div>
           </article>
           <article class="saveby-card tone-purple rise" style="--i:3">
-            <div class="saveby-card__top"><span>🪟</span><div><strong>0W 냉방을 먼저 씁니다</strong><small>낭비 ④ 습관적 냉방</small></div></div>
+            <div class="saveby-card__top"><span>🪟</span><div><strong>0W 냉방을 먼저 씁니다</strong><small>전력 ② 습관적 냉방</small></div></div>
             <p>실외가 더 시원하면 에어컨 대신 창문. 끄는 절약이 아니라 켤 필요를 줄이는 방식입니다.</p>
             <div class="gain">🍃 에어컨 가동시간 축소</div>
           </article>
-        </div>
-        <div class="power-choice rise" style="--i:4">
-          <div class="power-choice__title"><span>🔋</span><div><strong>ESP32-S3 전력 모드</strong><small>아직 남은 절감 여지 — 다음 단계 과제</small></div></div>
-          <div class="power-choice__modes">
-            <span class="power-mode current">시연 · Active (sleep 미적용)</span>
-            <span class="power-mode">제품화 검토 · Modem-sleep / Light-sleep</span>
-          </div>
         </div>
       </div>
     </section>
